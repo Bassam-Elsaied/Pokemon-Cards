@@ -196,3 +196,31 @@ body.details-page {
   transform: none;
   box-shadow: none;
 }
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  width: 300px;
+}
+
+#search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: #45a049;
+}

@@ -40,3 +40,30 @@ function createPokemonCard(pokemon) {
 }
 
 loadMorePokemon();
+
+// Add these variables at the top of your file
+const searchInput = document.getElementById("search-input");
+const searchButton = document.getElementById("search-button");
+
+// Add this function to handle the search
+function searchPokemon() {
+  const searchTerm = searchInput.value.toLowerCase();
+  const pokemonCards = document.querySelectorAll(".pokemon-card");
+
+  pokemonCards.forEach((card) => {
+    const pokemonName = card.querySelector("h2").textContent.toLowerCase();
+    if (pokemonName.includes(searchTerm)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+// Add event listeners for search
+searchButton.addEventListener("click", searchPokemon);
+searchInput.addEventListener("keyup", (event) => {
+  if (event.key === "Enter") {
+    searchPokemon();
+  }
+});
